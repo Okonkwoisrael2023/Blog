@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import Navbar from "@/components/Navbar";
 import { Instrument_Serif } from "next/font/google";
+import BlogSection from "@/components/BlogSection";
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
@@ -20,6 +21,8 @@ export default function Home() {
       >
         Simple thoughts on tech  <br /> and daily life
       </h1>
+
+      <BlogSection />
      
     </div>
   );
