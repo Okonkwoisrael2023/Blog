@@ -40,7 +40,7 @@ export default function BlogSection() {
             href={`/blog/${post.slug}`}
             className="rounded-3xl bg-[#222] p-4 transition hover:bg-[#2a2a2a]"
           >
-            <div className={`aspect-[5/3] w-full rounded-xl ${post.image}`} />
+            <div className={`aspect-5/3 w-full rounded-xl ${post.image}`} />
 
             <div className="px-3 pb-4 pt-6">
               <h3
