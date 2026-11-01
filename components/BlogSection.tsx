@@ -8,21 +8,21 @@ const instrumentSerif = Instrument_Serif({
 
 const posts = [
   {
-    slug: "designing-for-user-delight",
+    id: 1,
     title: "Designing for user delight",
     category: "projects",
     readTime: "5 min",
     image: "bg-gradient-to-br from-pink-200 via-orange-100 to-orange-300",
   },
   {
-    slug: "the-evolution-of-design-thinking",
+    id: 2,
     title: "The evolution of design thinking: insights and perspectives",
     category: "projects",
     readTime: "4 min",
     image: "bg-gradient-to-br from-neutral-600 via-neutral-800 to-neutral-700",
   },
   {
-    slug: "mastering-the-art-of-design-tools",
+    id: 3,
     title: "Mastering the art of design tools: a guide for product designers",
     category: "design",
     readTime: "3 min",
@@ -32,12 +32,12 @@ const posts = [
 
 export default function BlogSection() {
   return (
-    <section className="mx-6 mt-16 rounded-[40px] bg-[#1a1a1a] px-6 py-16 md:px-12 md:py-24">
-      <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
+    <section className="mx-3 mt-12 rounded-3xl bg-[#1a1a1a] px-4 py-10 sm:mx-6 sm:mt-16 sm:rounded-[40px] sm:px-6 sm:py-16 md:px-12 md:py-24">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
           <Link
-            key={post.slug}
-            href={`/blog/${post.slug}`}
+            key={post.id}
+            href={`/${post.id}`}
             className="rounded-3xl bg-[#222] p-4 transition hover:bg-[#2a2a2a]"
           >
             <div className={`aspect-5/3 w-full rounded-xl ${post.image}`} />

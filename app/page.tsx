@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from 'next/link';
 import Navbar from "@/components/Navbar";
 import { Instrument_Serif } from "next/font/google";
 import BlogSection from "@/components/BlogSection";
@@ -12,14 +10,14 @@ const instrumentSerif = Instrument_Serif({
 
 export default function Home() {
   return (
-    <div className="container flex min-h-screen flex-col bg-black pt-32">
+    <div className="container flex min-h-screen w-full max-w-full flex-col bg-black pt-32">
      <Navbar />
 
      
       <h1
-        className={`${instrumentSerif.className} text-center text-6xl leading-[0.95] tracking-tight text-white md:text-8xl pt-23`}
+        className={`${instrumentSerif.className} px-4 pt-8 text-center text-[clamp(2.75rem,9vw,6rem)] leading-[0.95] tracking-tight text-white`}
       >
-        Simple thoughts on tech  <br /> and daily life
+        Simple thoughts on tech <br className="hidden sm:block" /> and daily life
       </h1>
 
       <BlogSection />
