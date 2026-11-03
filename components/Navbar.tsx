@@ -21,7 +21,7 @@ export default function Navbar() {
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         aria-expanded={isMenuOpen}
         aria-controls="primary-navigation"
-        className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-lg md:hidden"
+        className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-lg lg:hidden"
         onClick={() => setIsMenuOpen((open) => !open)}
       >
         <span className="h-0.5 w-6 bg-white" />
@@ -31,7 +31,7 @@ export default function Navbar() {
 
       <nav
         id="primary-navigation"
-        className={`${isMenuOpen ? "flex" : "hidden"} absolute inset-x-0 top-full mt-2 flex-col gap-4 rounded-2xl bg-neutral-800/95 p-5 md:static md:mt-0 md:flex md:flex-row md:items-center md:gap-8 md:bg-transparent md:p-0`}
+        className={`${isMenuOpen ? "flex" : "hidden"} absolute inset-x-0 top-full mt-2 flex-col gap-4 rounded-2xl bg-neutral-800/95 p-5 lg:static lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-8 lg:bg-transparent lg:p-0`}
       >
         <Link href="/signup" className="text-lg font-medium" onClick={() => setIsMenuOpen(false)}>
           Sign up
