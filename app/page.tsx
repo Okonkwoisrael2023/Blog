@@ -7,8 +7,17 @@ const instrumentSerif = Instrument_Serif({
   weight: "400",
 });
 
+export const instant = false;
 
-export default function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string | string[] }>;
+}) {
+  const value = (await searchParams).page;
+  const requestedPage = typeof value === "string" ? Number(value) : 1;
+  const page = Number.isInteger(requestedPage) && requestedPage > 0 ? requestedPage : 1;
+
   return (
     <div className="container flex min-h-screen w-full max-w-full flex-col bg-black pt-32">
      <Navbar />
@@ -20,7 +29,7 @@ export default function Home() {
         Simple thoughts on tech <br className="hidden sm:block" /> and daily life
       </h1>
 
-      <BlogSection />
+      <BlogSection page={page} />
      
     </div>
   );

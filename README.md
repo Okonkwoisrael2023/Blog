@@ -20,6 +20,10 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Blog pagination
+
+Visit `/?page=2` to see the second page. `app/page.tsx` reads the page number from the URL and passes it to `BlogSection`. `lib/api.ts` requests six posts for that page, and the Previous/Next links update the URL. Change `PAGE_SIZE` in `components/BlogSection.tsx` to show a different number of posts per page.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
