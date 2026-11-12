@@ -6,7 +6,7 @@ const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
   weight: "400",
 });
-const PAGE_SIZE = 9;
+const PAGE_SIZE = 10;
 
 export default async function BlogSection({ page }: { page: number }) {
   const posts = await getPosts(page, PAGE_SIZE);

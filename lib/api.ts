@@ -13,7 +13,7 @@ export async function getPost(id: string): Promise<Post | null> {
   return response.json();
 }
 
-export async function getPosts(page: number, limit = 9): Promise<Post[]> {
+export async function getPosts(page: number, limit = 10): Promise<Post[]> {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=${limit}`,
   );
